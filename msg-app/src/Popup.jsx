@@ -1,9 +1,8 @@
 function Popup(props) {
-    const handleClick = props.onClose;
     return (
         <div>
             <div>{props.children}</div>
-            <button onClick={handleClick}>Close</button>
+            <button onClick= { ()=> props.onClose} >Redirect</button>
         </div>
     )
 }
