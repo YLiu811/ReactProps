@@ -3,11 +3,13 @@ import Popup from './Popup';
 import './App.css';
 
 function App() {
+  function goToNextPage () {
+    window.location.href = 'https://reactjs.org';
+  }
+
   return (
     <div className="App">
-      <Popup>
-        <Notification title = "Notice" message="This is the first general msg." severity = "general" />    
-        <Notification title = "Notice" message="This is the important msg." severity = "important" />
+      <Popup onClose={goToNextPage}>
         <Notification title = "Notice" message="This is the first urgent msg." severity = "urgent" />
       </Popup>
     </div>
